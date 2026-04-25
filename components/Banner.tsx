@@ -66,8 +66,7 @@ export default function Banner() {
             <p className="text-gray-500 pt-1 pb-6">Turning ideas into production-ready digital products. I craft scalable web applications from pixel-perfect frontends to robust backends</p>
             <div className="flex flex-wrap gap-3">
               <button
-                className="px-6 py-3 rounded-full text-sm uppercase font-bold text-black transition-all duration-200 hover:scale-105 active:scale-95"
-                style={{ backgroundColor: "#CBFF4D" }}
+                className="px-6 py-3 rounded-full text-sm bg-gold-400 uppercase font-bold text-black transition-all duration-200  hover:scale-105 active:scale-95"
               >
                 View My Works
               </button>

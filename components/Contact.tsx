@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 
 const channels = [
   { icon: "✉", label: "Email", value: "apuroy@email.com", href: "mailto:apuroy@email.com" },
-  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/apuroy", href: "#" },
-  { icon: "GH", label: "GitHub", value: "github.com/apuroy", href: "#" },
-  { icon: "☎", label: "Phone", value: "+880 1XXX-XXXXXX", href: "tel:+8801XXXXXXXXX" },
+  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/apu-r0y", href: "https://www.linkedin.com/in/apu-r0y/" },
+  { icon: "GH", label: "GitHub", value: "github.com/Apur0y", href: "#" },
+  { icon: "☎", label: "Phone", value: "+880 1786209895", href: "tel:+8801786209895" },
 ];
 
 export default function Contact() {
@@ -53,9 +53,11 @@ export default function Contact() {
 
             <div className="space-y-3">
               {channels.map((c) => (
+                
                 <a
                   key={c.label}
                   href={c.href}
+                   target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-white border border-stone-100 hover:border-gold-200 transition-all duration-200 group"
                 >
                   <div className="w-9 h-9 bg-gold-50 border border-gold-100 flex items-center justify-center text-gold text-xs font-bold shrink-0 group-hover:bg-gold group-hover:text-white transition-colors">
