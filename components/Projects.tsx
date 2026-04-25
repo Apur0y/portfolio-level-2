@@ -68,7 +68,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={p.num}
-              className="reveal group bg-white border border-stone-100 hover:border-gold-200 transition-all duration-300 overflow-hidden card-lift"
+              className="reveal group  border border-stone-100 hover:border-gold-200 transition-all duration-300 overflow-hidden card-lift"
               style={{ transitionDelay: `${(i % 2) * 100}ms` }}
             >
               {/* Thumbnail */}

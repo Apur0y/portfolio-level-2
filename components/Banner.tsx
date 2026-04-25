@@ -19,19 +19,20 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-orange-100 overflow-hidden font-sans">
-  
-
+    <section className="relative min-h-screen bg-gradient-to-tl from-orange-200 to-gray-300 overflow-hidden font-sans">
       {/* Background large name */}
-      {/* <div className="absolute top-52 left-0 right-0 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0">
+      <div className="absolute top-52 left-0 right-0 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0">
         <h1
           ref={headingRef}
           className="text-[12vw] font-black uppercase tracking-tighter text-stone-400/40 leading-none whitespace-nowrap"
           style={{ fontFamily: "'Georgia', serif", letterSpacing: "-0.04em" }}
         >
-          Apu Roy
+         <span className="text-shimmer font-semibold italic">Apu Roy</span>
         </h1>
-      </div> */}
+      </div>
+        
+  
+            
 
       {/* Main card */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-32">
@@ -46,28 +47,23 @@ export default function Banner() {
               className="w-full h-64 md:h-96  flex items-end justify-center rounded-l-3xl "
               aria-label="Profile photo"
             >
-             <Image 
-             src={"/apuroy.png"}
-             alt="Apu Roy"
-             height={500}
-             width={500}
-             />
+              <Image
+                src={"/apuroy.png"}
+                alt="Apu Roy"
+                height={500}
+                width={500}
+              />
             </div>
           </div>
 
           {/* Text content */}
           <div className="flex flex-col justify-center px-10 py-12 flex-1">
-            <h1
-          ref={headingRef}
-          className="text-6xl font-black uppercase tracking-tighter text-white leading-none whitespace-nowrap"
-          style={{ fontFamily: "'Georgia', serif", letterSpacing: "-0.04em" }}
-        >
-          Apu Roy
-        </h1>
-            <p className="text-white text-2xl md:text-3xl font-light leading-snug mb-8 max-w-sm">
-              Empowering Professionals &amp; Entrepreneurs with{" "}
-              <span className="font-bold">Modern Marketing Techniques.</span>
+            <p className="text-white text-2xl md:text-3xl font-light leading-snug  max-w-sm">
+            
+              <span className="font-bold">Full Stack Developer </span>
+               
             </p>
+            <p className="text-gray-500 pt-1 pb-6">Turning ideas into production-ready digital products. I craft scalable web applications from pixel-perfect frontends to robust backends</p>
             <div className="flex flex-wrap gap-3">
               <button
                 className="px-6 py-3 rounded-full text-sm font-bold text-black transition-all duration-200 hover:scale-105 active:scale-95"
@@ -82,7 +78,6 @@ export default function Banner() {
           </div>
         </div>
       </div>
-
     </section>
   );
 }
