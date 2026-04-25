@@ -41,7 +41,7 @@ export default function Education() {
   }, []);
 
   return (
-    <section id="education" className="py-24 bg-white" ref={ref}>
+    <section id="education" className="py-24 bg-gray-100" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">

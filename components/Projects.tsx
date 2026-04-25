@@ -53,7 +53,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-24 bg-stone-50" ref={ref}>
+    <section id="projects" className="py-24 " ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
@@ -68,7 +68,7 @@ export default function Projects() {
           {projects.map((p, i) => (
             <div
               key={p.num}
-              className="reveal group  border border-stone-100 hover:border-gold-200 transition-all duration-300 overflow-hidden card-lift"
+              className="reveal group bg-white border border-stone-100 hover:border-gold-200 transition-all duration-300 overflow-hidden card-lift"
               style={{ transitionDelay: `${(i % 2) * 100}ms` }}
             >
               {/* Thumbnail */}

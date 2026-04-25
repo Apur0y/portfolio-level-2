@@ -33,7 +33,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="py-24 " ref={ref}>
+    <section id="experience" className="py-24 bg-gray-100" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">

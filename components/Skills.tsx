@@ -49,7 +49,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="py-24 bg-stone-50" ref={ref}>
+    <section id="skills" className="py-24 " ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
