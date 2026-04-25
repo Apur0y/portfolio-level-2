@@ -3,29 +3,17 @@ import { useEffect, useRef } from "react";
 
 const educations = [
   {
-    year: "2019 — 2023",
-    degree: "B.Sc. in Computer Science",
-    institution: "Your University Name",
+    year: "2019 — 2025",
+    degree: "B.Sc. in Mathematics",
+    institution: "Gopalganj Science and Technology University.",
     desc: "Core studies in algorithms, data structures, software engineering, and web development. Add your actual institution name and dates.",
   },
   {
-    year: "2023",
+    year: "2024",
     degree: "Complete Web Development Bootcamp",
-    institution: "Programming Hero / Udemy",
+    institution: "Programming Hero",
     desc: "Comprehensive full-stack bootcamp covering React, Node.js, Express, MongoDB, and modern JavaScript best practices.",
-  },
-  {
-    year: "2023",
-    degree: "React — The Complete Guide",
-    institution: "Udemy — Maximilian Schwarzmüller",
-    desc: "In-depth mastery of React including Hooks, Context API, Redux, and Next.js for production-grade applications.",
-  },
-  {
-    year: "2022",
-    degree: "JavaScript Algorithms & Data Structures",
-    institution: "freeCodeCamp",
-    desc: "Certification covering ES6+, functional programming, OOP, and algorithmic problem-solving in JavaScript.",
-  },
+  }
 ];
 
 export default function Education() {

@@ -2,10 +2,25 @@
 import { useEffect, useRef, useState } from "react";
 
 const channels = [
-  { icon: "✉", label: "Email", value: "apuroy@email.com", href: "mailto:apuroy@email.com" },
-  { icon: "in", label: "LinkedIn", value: "linkedin.com/in/apu-r0y", href: "https://www.linkedin.com/in/apu-r0y/" },
+  {
+    icon: "✉",
+    label: "Email",
+    value: "apuroy@email.com",
+    href: "mailto:apuroy@email.com",
+  },
+  {
+    icon: "in",
+    label: "LinkedIn",
+    value: "linkedin.com/in/apu-r0y",
+    href: "https://www.linkedin.com/in/apu-r0y/",
+  },
   { icon: "GH", label: "GitHub", value: "github.com/Apur0y", href: "#" },
-  { icon: "☎", label: "Phone", value: "+880 1786209895", href: "tel:+8801786209895" },
+  {
+    icon: "☎",
+    label: "Phone",
+    value: "+880 1786209895",
+    href: "tel:+8801786209895",
+  },
 ];
 
 export default function Contact() {
@@ -14,8 +29,11 @@ export default function Contact() {
 
   useEffect(() => {
     const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.target.classList.toggle("visible", e.isIntersecting)),
-      { threshold: 0.1 }
+      (entries) =>
+        entries.forEach((e) =>
+          e.target.classList.toggle("visible", e.isIntersecting),
+        ),
+      { threshold: 0.1 },
     );
     ref.current?.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
     return () => obs.disconnect();
@@ -47,17 +65,18 @@ export default function Contact() {
               <em className="text-gold">remarkable</em> together
             </h3>
             <p className="text-gray-500 leading-relaxed mb-8 font-light text-[15px]">
-              Have a project in mind, an opportunity to share, or just want to connect? My inbox is
-              always open. I typically respond within 24 hours.
+              Have a project in mind, an opportunity to share, or just want to
+              connect? My inbox is always open. I typically respond within 24
+              hours.
             </p>
 
             <div className="space-y-3">
               {channels.map((c) => (
-                
                 <a
                   key={c.label}
                   href={c.href}
-                   target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-white border border-stone-100 hover:border-gold-200 transition-all duration-200 group"
                 >
                   <div className="w-9 h-9 bg-gold-50 border border-gold-100 flex items-center justify-center text-gold text-xs font-bold shrink-0 group-hover:bg-gold group-hover:text-white transition-colors">
@@ -71,8 +90,19 @@ export default function Contact() {
                       {c.value}
                     </p>
                   </div>
-                  <svg className="ml-auto text-gray-300 group-hover:text-gold transition-colors" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M3 11L11 3M11 3H6M11 3v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                  <svg
+                    className="ml-auto text-gray-300 group-hover:text-gold transition-colors"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                  >
+                    <path
+                      d="M3 11L11 3M11 3H6M11 3v5"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
                   </svg>
                 </a>
               ))}
@@ -80,10 +110,16 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form className="reveal space-y-4" style={{ transitionDelay: "100ms" }} onSubmit={handleSubmit}>
+          <form
+            className="reveal space-y-4"
+            style={{ transitionDelay: "100ms" }}
+            onSubmit={handleSubmit}
+          >
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">First Name</label>
+                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
+                  First Name
+                </label>
                 <input
                   type="text"
                   placeholder="Your name"
@@ -91,7 +127,9 @@ export default function Contact() {
                 />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">Last Name</label>
+                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
+                  Last Name
+                </label>
                 <input
                   type="text"
                   placeholder="Last name"
@@ -100,7 +138,9 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">Email</label>
+              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
+                Email
+              </label>
               <input
                 type="email"
                 placeholder="your@email.com"
@@ -108,7 +148,9 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">Subject</label>
+              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
+                Subject
+              </label>
               <input
                 type="text"
                 placeholder="What's this about?"
@@ -116,7 +158,9 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">Message</label>
+              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
+                Message
+              </label>
               <textarea
                 placeholder="Tell me about your project or opportunity..."
                 rows={5}
@@ -124,7 +168,14 @@ export default function Contact() {
               />
             </div>
             <button
-              type="submit"
+              type="button"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/apu-r0y/",
+                  "_blank",
+                  "noopener,noreferrer",
+                )
+              }
               className={`w-full py-4 text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
                 sent
                   ? "bg-green-500 text-white"

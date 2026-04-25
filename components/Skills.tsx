@@ -2,28 +2,65 @@
 import { useEffect, useRef } from "react";
 
 const frontendSkills = [
+  { name: "HTML", pct: 95 },
+  { name: "CSS", pct: 95 },
   { name: "JavaScript", pct: 92 },
   { name: "TypeScript", pct: 85 },
   { name: "React.js", pct: 90 },
   { name: "Next.js", pct: 82 },
-  { name: "HTML / CSS", pct: 95 },
+  { name: "Redux", pct: 85 },
+  { name: "RTK Query", pct: 80 },
   { name: "Tailwind CSS", pct: 88 },
+  { name: "React Router", pct: 85 },
 ];
 
 const backendSkills = [
   { name: "Node.js", pct: 84 },
   { name: "Express.js", pct: 80 },
-  { name: "REST APIs", pct: 86 },
+  { name: "REST API", pct: 86 },
   { name: "MongoDB", pct: 75 },
-  { name: "Git / GitHub", pct: 90 },
-  { name: "Vercel / Deploy", pct: 78 },
+  { name: "Firebase", pct: 78 },
+  { name: "JWT", pct: 82 },
+  { name: "Socket.io", pct: 70 },
+];
+
+const toolsSkills = [
+  { name: "Git", pct: 90 },
+  { name: "GitHub", pct: 90 },
+  { name: "Postman", pct: 85 },
+  { name: "Vercel", pct: 78 },
+  { name: "Netlify", pct: 75 },
+  { name: "Figma", pct: 80 },
+];
+
+const otherSkills = [
+  { name: "Zod", pct: 75 },
+  { name: "Stripe", pct: 80 },
+  { name: "JSPDF", pct: 70 },
 ];
 
 const techStack = [
-  "JavaScript", "TypeScript", "React.js", "Next.js",
-  "Node.js", "Express.js", "MongoDB", "REST API",
-  "Tailwind CSS", "Redux", "Git", "GitHub",
-  "Vercel", "Postman", "Figma", "VS Code",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Redux",
+  "RTK Query",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "REST API",
+  "Firebase",
+  "JWT",
+  "Socket.io",
+  "Tailwind CSS",
+  "Git",
+  "GitHub",
+  "Vercel",
+  "Postman",
+  "Figma",
 ];
 
 export default function Skills() {
