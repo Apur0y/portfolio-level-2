@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function Banner() {
@@ -65,11 +66,11 @@ export default function Banner() {
             </p>
             <p className="text-gray-500 pt-1 pb-6">Turning ideas into production-ready digital products. I craft scalable web applications from pixel-perfect frontends to robust backends</p>
             <div className="flex flex-wrap gap-3">
-              <button
+              <Link href="/#projects"
                 className="px-6 py-3 rounded-full text-sm bg-gold-400 uppercase font-bold text-black transition-all duration-200  hover:scale-105 active:scale-95"
               >
                 View My Works
-              </button>
+              </Link>
               <button className="px-6 py-3 uppercase rounded-full text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-all duration-200">
                 Let's talk
               </button>

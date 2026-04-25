@@ -63,12 +63,7 @@ export default function About() {
               I sharpened my skills building responsive, performant interfaces and collaborating in
               fast-paced development teams.
             </p>
-            <p className="text-gray-500 leading-relaxed mb-8 font-light text-[15px]">
-              My stack centers around the{" "}
-              <span className="text-gray-900 font-medium">JavaScript/TypeScript ecosystem</span> — from
-              crafting pixel-perfect UIs with React and Next.js to building reliable server-side
-              applications with Node.js and Express.
-            </p>
+           
 
             {/* Quote */}
             <blockquote className="border-l-2 border-gold pl-5 py-1 bg-gold-50 pr-4">
