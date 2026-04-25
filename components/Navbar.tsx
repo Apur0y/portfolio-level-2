@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a
-          href="#hero"
+          href="#banner"
           className="font-serif text-2xl italic text-gold font-semibold tracking-tight"
         >
           AR.
