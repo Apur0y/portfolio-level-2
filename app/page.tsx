@@ -13,7 +13,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="bg-gradient-to-tl from-orange-200 to-gray-300">
+      <main className="bg-stone-900">
+        {/* bg-gradient-to-tl from-orange-200 to-gray-300 */}
         <Banner/>
         {/* <Hero /> */}
         <About />

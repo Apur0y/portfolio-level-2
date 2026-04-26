@@ -42,11 +42,11 @@ const otherSkills = [
 
 // ── Update these with your real handles ─────────────────────────────────────
 const LEETCODE_URL    = "https://leetcode.com/u/ApuRoy/";
-const LEETCODE_HANDLE = "leetcode.com/u/yourhandle";
+const LEETCODE_HANDLE = "leetcode.com/u/ApuRoy";
 const LEETCODE_SOLVED = "";
 
 const CF_URL    = "https://codeforces.com/profile/apuroy56";
-const CF_HANDLE = "codeforces.com/profile/yourhandle";
+const CF_HANDLE = "codeforces.com/profile/apuroy56";
 const CF_RATING = ""; // e.g. "Newbie", "Pupil", "Specialist", "Expert" …
 
 // ── CS Concepts ──────────────────────────────────────────────────────────────
@@ -115,7 +115,7 @@ export default function Skills() {
         <div className="flex items-center gap-4 mb-14">
           <span className="font-serif italic text-gold text-sm">02</span>
           <div className="md:w-12 h-px bg-gold opacity-50" />
-          <h2 className="font-serif text-4xl md:text-5xl tracking-tight">
+          <h2 className="font-serifc text-white text-4xl md:text-5xl tracking-tight">
             Skills & <em className="text-gold">Expertise</em>
           </h2>
         </div>
@@ -133,7 +133,7 @@ export default function Skills() {
 
           {/* ── RIGHT: Problem Solving ── */}
           <div>
-            <h3 className="font-serif text-2xl md:text-3xl mb-2">
+            <h3 className="font-serif text-2xl text-white md:text-3xl mb-2">
               Problem <em className="text-gold">Solving</em>
             </h3>
             <p className="text-sm text-stone-500 mb-6 leading-relaxed">

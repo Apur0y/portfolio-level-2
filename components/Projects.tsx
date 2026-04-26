@@ -223,7 +223,7 @@ export default function Projects() {
             <div className="flex items-center gap-4">
               <span className="font-serif italic text-amber-600 text-sm">04</span>
               <div className="w-12 h-px bg-amber-400 opacity-50" />
-              <h2 className="font-serif text-4xl md:text-5xl tracking-tight">
+              <h2 className="font-serif text-4xl text-white md:text-5xl tracking-tight">
                 Selected <em className="text-amber-600">Projects</em>
               </h2>
             </div>
@@ -271,7 +271,7 @@ export default function Projects() {
                 />
 
                 {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
+                <div className="p-6 flex-1 flex flex-col bg-stone-800">
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {p.tags.map((t) => (
@@ -285,12 +285,12 @@ export default function Projects() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-xl tracking-tight text-gray-900 group-hover:text-amber-600 transition-colors">
+                  <h3 className="font-serif text-xl font-bold py-2 tracking-tight text-amber-600 group-hover:text-amber-500 transition-colors">
                     {p.title}
                   </h3>
 
                   {/* Subtitle / name */}
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-amber-500 mb-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-widest text-gray-100  mb-2">
                     {p.name}
                   </p>
 

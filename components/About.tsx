@@ -5,22 +5,22 @@ const pillars = [
   {
     icon: "◈",
     title: "Full Stack Thinking",
-    desc: "I don't silo myself. Whether it's optimizing a MongoDB aggregation pipeline or shaving 200ms off a LCP score — I own the full delivery, not just my slice of it.",
+    desc: "I work across both frontend and backend. I focus on delivering complete, working solutions — not just isolated parts.",
   },
   {
     icon: "◎",
-    title: "Performance-First",
-    desc: "Perceived speed is a product decision. I treat Core Web Vitals, bundle budgets, and render strategies with the same rigor I give to features.",
+    title: "Performance First",
+    desc: "I care about speed and user experience. I optimize load time, performance, and responsiveness in every project.",
   },
   {
     icon: "◑",
     title: "Clean Code",
-    desc: "Code is read far more often than it's written. I write for the next engineer — clear naming, single-responsibility modules, and zero clever tricks that can't be explained in one sentence.",
+    desc: "I write simple, readable, and maintainable code. I follow clear structure and best practices so others can easily understand it.",
   },
   {
     icon: "◐",
-    title: "Continuous Growth",
-    desc: "The ecosystem moves fast. I stay current — not by chasing trends, but by understanding the problems each tool solves and knowing when to reach for them.",
+    title: "Continuous Learning",
+    desc: "I keep improving my skills by learning new tools and understanding when and why to use them.",
   },
 ];
 
@@ -96,7 +96,7 @@ export default function About() {
                 href="https://drive.google.com/drive/folders/1230XX-Km466vr9KhZlh7-63ivGoTyF3t"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 text-xs font-medium tracking-widest uppercase px-6 py-3 hover:border-gold hover:text-gold transition-all"
+                className="inline-flex items-center gap-2 border border-gray-300 text-gray-400 text-xs font-medium tracking-widest uppercase px-6 py-3 hover:border-gold hover:text-gold transition-all"
               >
                 Download Resume
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

@@ -46,7 +46,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 " ref={ref}>
+    <section id="contact" className="py-24 text-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
@@ -60,7 +60,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
           <div className="reveal">
-            <h3 className="font-serif text-3xl md:text-4xl leading-tight tracking-tight text-gray-900 mb-5">
+            <h3 className="font-serif text-3xl md:text-4xl leading-tight tracking-tight text-gray-100 mb-5">
               Let&apos;s build something{" "}
               <em className="text-gold">remarkable</em> together
             </h3>

@@ -44,7 +44,7 @@ export default function Education() {
           {educations.map((e, i) => (
             <div
               key={e.degree}
-              className="reveal group bg-stone-50 border border-stone-100 hover:border-gold-200 p-7 transition-all duration-300 relative overflow-hidden card-lift"
+              className="reveal group bg-stone-800 rounded border border-stone-100 hover:border-gold-200 p-7 transition-all duration-300 relative overflow-hidden card-lift"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               {/* Circle decoration */}
@@ -53,7 +53,7 @@ export default function Education() {
               <div className="text-[10px] tracking-[0.18em] uppercase text-gold-600 font-semibold mb-3">
                 {e.year}
               </div>
-              <h3 className="font-serif text-lg leading-snug text-gray-900 mb-2 tracking-tight">
+              <h3 className="font-serif text-lg leading-snug text-gray-100 mb-2 tracking-tight">
                 {e.degree}
               </h3>
               <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-3">

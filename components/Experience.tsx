@@ -48,7 +48,7 @@ export default function Experience() {
           {experiences.map((exp, i) => (
             <div
               key={exp.role + exp.company}
-              className="reveal group relative bg-stone-50 border border-stone-100 hover:border-gold-200 transition-all duration-300 p-8 overflow-hidden card-lift"
+              className="reveal group relative bg-stone-800 backdrop-blur-2xl rounded border border-stone-100 hover:border-gold-200 transition-all duration-300 p-8 overflow-hidden card-lift"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Gold left accent */}
@@ -56,7 +56,7 @@ export default function Experience() {
 
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
                 <div>
-                  <h3 className="font-serif text-2xl tracking-tight text-gray-900 mb-1">
+                  <h3 className="font-serif text-2xl tracking-tight text-gray-100 mb-1">
                     {exp.role}
                   </h3>
                   <span className="text-sm font-semibold text-gold tracking-wide uppercase">
