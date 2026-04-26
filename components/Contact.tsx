@@ -5,7 +5,7 @@ const channels = [
   {
     icon: "✉",
     label: "Email",
-    value: "apuroy@email.com",
+    value: "apuroy2785@email.com",
     href: "mailto:apuroy@email.com",
   },
   {

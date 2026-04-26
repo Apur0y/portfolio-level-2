@@ -33,13 +33,13 @@ export default function Experience() {
   }, []);
 
   return (
-    <section id="experience" className="py-24 bg-gray-100" ref={ref}>
+    <section id="experience" className="py-24 bg-stone-900" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
           <span className="font-serif italic text-gold text-sm">03</span>
           <div className="w-12 h-px bg-gold opacity-50" />
-          <h2 className="font-serif text-4xl md:text-5xl tracking-tight">
+          <h2 className="font-serif text-4xl md:text-5xl tracking-tight text-white">
             Work <em className="text-gold">Experience</em>
           </h2>
         </div>

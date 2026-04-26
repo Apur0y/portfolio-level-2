@@ -1,165 +1,209 @@
 "use client";
-import { useEffect, useRef } from "react";
+
+// ── Skill data ──────────────────────────────────────────────────────────────
 
 const frontendSkills = [
-  { name: "HTML", pct: 95 },
-  { name: "CSS", pct: 95 },
-  { name: "JavaScript", pct: 92 },
-  { name: "TypeScript", pct: 85 },
-  { name: "React.js", pct: 90 },
-  { name: "Next.js", pct: 82 },
-  { name: "Redux", pct: 85 },
-  { name: "RTK Query", pct: 80 },
-  { name: "Tailwind CSS", pct: 88 },
-  { name: "React Router", pct: 85 },
+  { name: "HTML5",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "JavaScript",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "React.js",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "Redux",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+  { name: "RTK Query",   emoji: "⚡" },
+  { name: "Tailwind CSS",icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+  { name: "React Router",emoji: "🔀" },
 ];
 
 const backendSkills = [
-  { name: "Node.js", pct: 84 },
-  { name: "Express.js", pct: 80 },
-  { name: "REST API", pct: 86 },
-  { name: "MongoDB", pct: 75 },
-  { name: "Firebase", pct: 78 },
-  { name: "JWT", pct: 82 },
-  { name: "Socket.io", pct: 70 },
+  { name: "Node.js",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  { name: "REST API",   emoji: "🔗" },
+  { name: "MongoDB",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Firebase",   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+  { name: "JWT",        emoji: "🔑" },
+  { name: "Socket.io",  emoji: "🔌" },
 ];
 
 const toolsSkills = [
-  { name: "Git", pct: 90 },
-  { name: "GitHub", pct: 90 },
-  { name: "Postman", pct: 85 },
-  { name: "Vercel", pct: 78 },
-  { name: "Netlify", pct: 75 },
-  { name: "Figma", pct: 80 },
+  { name: "Git",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "GitHub",   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "Figma",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+  { name: "Vercel",   emoji: "🚀" },
+  { name: "Netlify",  emoji: "🌐" },
+  { name: "Postman",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
 ];
 
 const otherSkills = [
-  { name: "Zod", pct: 75 },
-  { name: "Stripe", pct: 80 },
-  { name: "JSPDF", pct: 70 },
+  { name: "Zod",    emoji: "🛡️" },
+  { name: "Stripe", emoji: "💳" },
+  { name: "jsPDF",  emoji: "📄" },
 ];
 
-const techStack = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Redux",
-  "RTK Query",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "REST API",
-  "Firebase",
-  "JWT",
-  "Socket.io",
-  "Tailwind CSS",
-  "Git",
-  "GitHub",
-  "Vercel",
-  "Postman",
-  "Figma",
+// ── Update these with your real handles ─────────────────────────────────────
+const LEETCODE_URL    = "https://leetcode.com/u/ApuRoy/";
+const LEETCODE_HANDLE = "leetcode.com/u/yourhandle";
+const LEETCODE_SOLVED = "";
+
+const CF_URL    = "https://codeforces.com/profile/apuroy56";
+const CF_HANDLE = "codeforces.com/profile/yourhandle";
+const CF_RATING = ""; // e.g. "Newbie", "Pupil", "Specialist", "Expert" …
+
+// ── CS Concepts ──────────────────────────────────────────────────────────────
+const concepts = [
+  { label: "Data Structures & Algorithms", highlight: true },
+  { label: "Linked List", highlight: true },
+  { label: "Stack & Queue" , highlight: true},
+  { label: "Binary Search", highlight: true },
+  { label: "Merge Sort", highlight: true },
+  { label: "Quick Sort", highlight: true },
+  { label: "Bubble Sort" },
+  { label: "Selection Sort" },
+  { label: "Hash Table", highlight: true },
+  { label: "Dynamic Programming", highlight: true },
+  { label: "Recursion" },
+  { label: "Two Pointers" , highlight: true},
+  { label: "Sliding Window" },
+  { label: "BFS / DFS" },
+  { label: "Tree Traversal" },
+  { label: "Greedy" },
+  { label: "Backtracking" },
+  { label: "Graph Theory" },
+  { label: "Big O Notation" },
+  { label: "OOP Principles", highlight: true },
 ];
+
+// ── Sub-components ───────────────────────────────────────────────────────────
+
+type Skill = { name: string; icon?: string; emoji?: string };
+
+function Chip({ skill }: { skill: Skill }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-stone-200 bg-white rounded text-xs font-medium text-stone-600 hover:border-gold hover:text-gold hover:bg-gold-50 transition-all duration-200 cursor-default">
+      {skill.icon ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={skill.icon} alt="" className="w-4 h-4 object-contain" />
+      ) : (
+        <span className="text-sm leading-none">{skill.emoji}</span>
+      )}
+      {skill.name}
+    </span>
+  );
+}
+
+function SkillGroup({ title, skills }: { title: string; skills: Skill[] }) {
+  return (
+    <div className="mb-7">
+      <h3 className="font-serif italic text-gold-700 text-[15px] mb-3 pb-2.5 border-b border-stone-200">
+        {title}
+      </h3>
+      <div className="flex flex-wrap gap-2">
+        {skills.map((s) => <Chip key={s.name} skill={s} />)}
+      </div>
+    </div>
+  );
+}
+
+// ── Main component ────────────────────────────────────────────────────────────
 
 export default function Skills() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            e.target.querySelectorAll<HTMLElement>(".skill-bar-fill").forEach((bar) => {
-              const w = bar.dataset.w ?? "0";
-              bar.style.width = w + "%";
-            });
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    ref.current?.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
-
   return (
-    <section id="skills" className="py-24 " ref={ref}>
+    <section id="skills" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
           <span className="font-serif italic text-gold text-sm">02</span>
-          <div className="w-12 h-px bg-gold opacity-50" />
+          <div className="md:w-12 h-px bg-gold opacity-50" />
           <h2 className="font-serif text-4xl md:text-5xl tracking-tight">
             Skills & <em className="text-gold">Expertise</em>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 mb-16">
-          {/* Frontend */}
-          <div className="reveal">
-            <h3 className="font-serif text-xl italic text-gold-700 mb-6 pb-3 border-b border-stone-200">
-              Frontend Development
-            </h3>
-            <div className="space-y-5">
-              {frontendSkills.map((s) => (
-                <div key={s.name} className="flex items-center gap-4">
-                  <span className="text-sm text-gray-600 font-medium w-36 shrink-0">{s.name}</span>
-                  <div className="flex-1 h-px bg-stone-200 relative">
-                    <div
-                      className="skill-bar-fill absolute top-0 left-0 h-full bg-gradient-to-r from-gold-600 to-gold"
-                      data-w={s.pct}
-                      style={{ width: 0 }}
-                    >
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 rounded-full bg-gold border-2 border-white shadow-sm" />
-                    </div>
-                  </div>
-                  <span className="text-xs font-mono text-gold w-8 text-right">{s.pct}%</span>
-                </div>
-              ))}
-            </div>
+        {/* Two-column grid */}
+        <div className="grid lg:grid-cols-2 gap-12">
+
+          {/* ── LEFT: Technical Skills ── */}
+          <div>
+            <SkillGroup title="Frontend Development" skills={frontendSkills} />
+            <SkillGroup title="Backend Development"  skills={backendSkills} />
+            <SkillGroup title="Tools & Platforms"    skills={toolsSkills} />
+            <SkillGroup title="Libraries & Integrations" skills={otherSkills} />
           </div>
 
-          {/* Backend */}
-          <div className="reveal" style={{ transitionDelay: "100ms" }}>
-            <h3 className="font-serif text-xl italic text-gold-700 mb-6 pb-3 border-b border-stone-200">
-              Backend & Tools
+          {/* ── RIGHT: Problem Solving ── */}
+          <div>
+            <h3 className="font-serif text-2xl md:text-3xl mb-2">
+              Problem <em className="text-gold">Solving</em>
             </h3>
-            <div className="space-y-5">
-              {backendSkills.map((s) => (
-                <div key={s.name} className="flex items-center gap-4">
-                  <span className="text-sm text-gray-600 font-medium w-36 shrink-0">{s.name}</span>
-                  <div className="flex-1 h-px bg-stone-200 relative">
-                    <div
-                      className="skill-bar-fill absolute top-0 left-0 h-full bg-gradient-to-r from-gold-600 to-gold"
-                      data-w={s.pct}
-                      style={{ width: 0 }}
-                    >
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 rounded-full bg-gold border-2 border-white shadow-sm" />
-                    </div>
-                  </div>
-                  <span className="text-xs font-mono text-gold w-8 text-right">{s.pct}%</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+            <p className="text-sm text-stone-500 mb-6 leading-relaxed">
+              Consistent competitive programming practice focused on algorithmic
+              thinking and optimal solutions.
+            </p>
 
-        {/* Tech Cloud */}
-        <div className="reveal pt-8 border-t border-stone-200">
-          <h3 className="font-serif text-xl italic text-gold-700 mb-6">Full Tech Stack</h3>
-          <div className="flex flex-wrap gap-3">
-            {techStack.map((t) => (
-              <span
-                key={t}
-                className="px-4 py-2 border border-stone-200 text-xs text-gray-600 tracking-widest hover:border-gold hover:text-gold hover:bg-gold-50 transition-all duration-200 cursor-default"
+            {/* Platform cards */}
+            <div className="flex flex-col gap-3 mb-8">
+
+              {/* LeetCode */}
+              <a
+                href={LEETCODE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
               >
-                {t}
-              </span>
-            ))}
+                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">🟡</div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[13px] font-semibold text-stone-800">LeetCode</div>
+                  <div className="font-mono text-[11px] text-gold truncate">{LEETCODE_HANDLE}</div>
+                </div>
+                <div className="text-right md:shrink-0">
+                  <div className="font-mono text-lg font-medium text-stone-800">{LEETCODE_SOLVED}</div>
+                  {/* <div className="text-[10px] uppercase tracking-wider text-stone-400">Problems</div> */}
+                </div>
+                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">↗</span>
+              </a>
+
+              {/* Codeforces */}
+              <a
+                href={CF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
+              >
+                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">🔵</div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[13px] font-semibold text-stone-800">Codeforces</div>
+                  <div className="font-mono text-[11px] text-gold truncate">{CF_HANDLE}</div>
+                </div>
+                <div className="text-right shrink-0">
+                  <div className="font-mono text-lg font-medium text-stone-800">{CF_RATING}</div>
+                  {/* <div className="text-[10px] uppercase tracking-wider text-stone-400">Rating</div> */}
+                </div>
+                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">↗</span>
+              </a>
+
+            </div>
+
+            {/* CS Concepts */}
+            <h4 className="font-serif italic text-gold-700 text-[15px] mb-3 pb-2.5 border-b border-stone-200">
+              CS Concepts & Algorithms
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {concepts.map((c) => (
+                <span
+                  key={c.label}
+                  className={`px-3 py-1 rounded-full text-[11px] font-medium border transition-all duration-200 cursor-default hover:border-gold hover:text-gold ${
+                    c.highlight
+                      ? "bg-amber-50 border-amber-200 text-amber-800"
+                      : "bg-stone-100 border-stone-200 text-stone-600"
+                  }`}
+                >
+                  {c.label}
+                </span>
+              ))}
+            </div>
           </div>
+
         </div>
       </div>
     </section>

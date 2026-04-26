@@ -40,7 +40,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-24 bg-gray-100" ref={ref}>
+    <section id="about" className="py-24 bg-stone-900 text-white" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
@@ -56,7 +56,7 @@ export default function About() {
           <div className="reveal">
             <p className="text-gray-500 leading-relaxed mb-5 font-light text-[15px]">
               I&apos;m{" "}
-              <span className="text-gray-900 font-medium">Apu Roy</span>, a Full
+              <span className="text-gray-100 font-medium">Apu Roy</span>, a Full
               Stack Developer who operates at the intersection of engineering
               precision and product thinking. I don't just write code; I build
               systems that are maintainable, performant, and built to last.
@@ -71,7 +71,7 @@ export default function About() {
               <br />
               <p className="mt-5"></p>
               Professionally, I sharpened my skills as a{" "}
-              <span className="text-gray-900 font-medium">
+              <span className="text-gray-100 font-medium">
                 Frontend Developer at SM Technology
               </span>
               , where I worked within fast-moving teams to ship responsive,

@@ -29,13 +29,13 @@ export default function Education() {
   }, []);
 
   return (
-    <section id="education" className="py-24 bg-gray-100" ref={ref}>
+    <section id="education" className="py-24 bg-stone-900" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
           <span className="font-serif italic text-gold text-sm">05</span>
           <div className="w-12 h-px bg-gold opacity-50" />
-          <h2 className="font-serif text-4xl md:text-5xl tracking-tight">
+          <h2 className="font-serif text-4xl md:text-5xl text-white tracking-tight">
             Education & <em className="text-gold">Certifications</em>
           </h2>
         </div>
