@@ -5,19 +5,19 @@ const experiences = [
   {
     role: "Frontend Developer",
     company: "SM Technology",
-    period: "May 2025 – Oct 2025",
-    current: false,
+    period: "May 2025 – Present",
+    current: true,
     desc: "Developed and maintained responsive web applications using React.js and Next.js. Collaborated closely with UI/UX designers to translate Figma mockups into pixel-perfect, accessible interfaces. Optimized application performance, improving load speeds and core web vitals. Contributed to component library development and maintained code quality through peer code reviews.",
     tags: ["React.js", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "REST APIs", "Git"],
-  },
-  {
-    role: "Freelance Full Stack Developer",
-    company: "Self-Employed",
-    period: "Nov 2025 — Present",
-    current: true,
-    desc: "Designed and delivered end-to-end web applications for clients across various industries. Built full-stack solutions using React, Node.js, and Express with MongoDB databases. Managed client communication, project scoping, and delivery timelines independently.",
-    tags: ["Node.js", "Express.js", "MongoDB", "React.js", "Next.js", "Full Stack"],
-  },
+  }
+  // {
+  //   role: "Freelance Full Stack Developer",
+  //   company: "Self-Employed",
+  //   period: "Nov 2025 — Present",
+  //   current: true,
+  //   desc: "Designed and delivered end-to-end web applications for clients across various industries. Built full-stack solutions using React, Node.js, and Express with MongoDB databases. Managed client communication, project scoping, and delivery timelines independently.",
+  //   tags: ["Node.js", "Express.js", "MongoDB", "React.js", "Next.js", "Full Stack"],
+  // },
 ];
 
 export default function Experience() {

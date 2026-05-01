@@ -117,7 +117,7 @@ export default function About() {
             {pillars.map((p, i) => (
               <div
                 key={p.title}
-                className={`reveal group p-5 border border-stone-100 hover:border-gold-200 transition-all duration-300 bg-stone-50 hover:bg-gold-50/30 card-lift`}
+                className={`reveal group p-5 border border-stone-100 hover:border-gold-200 transition-all duration-300 bg-stone-50 hover:bg-gold-50 card-lift`}
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="w-7 h-7 bg-gold-100 flex items-center justify-center mb-3 text-gold text-sm group-hover:bg-gold group-hover:text-white transition-colors">
