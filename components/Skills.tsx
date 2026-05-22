@@ -3,49 +3,92 @@
 // ── Skill data ──────────────────────────────────────────────────────────────
 
 const frontendSkills = [
-  { name: "HTML5",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-  { name: "CSS3",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-  { name: "JavaScript",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "TypeScript",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-  { name: "React.js",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "Next.js",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-  { name: "Redux",       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
-  { name: "RTK Query",   emoji: "⚡" },
-  { name: "Tailwind CSS",icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
-  { name: "React Router",emoji: "🔀" },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "React.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
+  {
+    name: "Redux Toolkit",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  },
+  { name: "TanStack Query", emoji: "⚡" },
+  { name: "React Hook Form", emoji: "📝" },
+  { name: "Zod", emoji: "🛡️" },
 ];
 
 const backendSkills = [
-  { name: "Node.js",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-  { name: "REST API",   emoji: "🔗" },
-  { name: "MongoDB",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-  { name: "Firebase",   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-  { name: "JWT",        emoji: "🔑" },
-  { name: "Socket.io",  emoji: "🔌" },
+  {
+    name: "Node.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  {
+    name: "Express.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  },
+  { name: "REST API", emoji: "🔗" },
+  { name: "JWT", emoji: "🔑" },
+  {
+    name: "Firebase Auth",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+  },
+  { name: "WebSocket", emoji: "🔌" },
+];
+
+const databaseSkills = [
+  {
+    name: "MongoDB",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
 ];
 
 const toolsSkills = [
-  { name: "Git",      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "GitHub",   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-  { name: "Figma",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Vercel",   emoji: "🚀" },
-  { name: "Netlify",  emoji: "🌐" },
-  { name: "Postman",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+  {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  { name: "Vercel", emoji: "🚀" },
+  { name: "Netlify", emoji: "🌐" },
+  { name: "AWS S3", emoji: "☁️" },
+  { name: "VPS", emoji: "🖥️" },
+  {
+    name: "Postman",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  },
 ];
-
-const otherSkills = [
-  { name: "Zod",    emoji: "🛡️" },
-  { name: "Stripe", emoji: "💳" },
-  { name: "jsPDF",  emoji: "📄" },
-];
-
 // ── Update these with your real handles ─────────────────────────────────────
-const LEETCODE_URL    = "https://leetcode.com/u/ApuRoy/";
+const LEETCODE_URL = "https://leetcode.com/u/ApuRoy/";
 const LEETCODE_HANDLE = "leetcode.com/u/ApuRoy";
 const LEETCODE_SOLVED = "";
 
-const CF_URL    = "https://codeforces.com/profile/apuroy56";
+const CF_URL = "https://codeforces.com/profile/apuroy56";
 const CF_HANDLE = "codeforces.com/profile/apuroy56";
 const CF_RATING = ""; // e.g. "Newbie", "Pupil", "Specialist", "Expert" …
 
@@ -53,7 +96,7 @@ const CF_RATING = ""; // e.g. "Newbie", "Pupil", "Specialist", "Expert" …
 const concepts = [
   { label: "Data Structures & Algorithms", highlight: true },
   { label: "Linked List", highlight: true },
-  { label: "Stack & Queue" , highlight: true},
+  { label: "Stack & Queue", highlight: true },
   { label: "Binary Search", highlight: true },
   { label: "Merge Sort", highlight: true },
   { label: "Quick Sort", highlight: true },
@@ -62,7 +105,7 @@ const concepts = [
   { label: "Hash Table", highlight: true },
   { label: "Dynamic Programming", highlight: true },
   { label: "Recursion" },
-  { label: "Two Pointers" , highlight: true},
+  { label: "Two Pointers", highlight: true },
   { label: "Sliding Window" },
   { label: "BFS / DFS" },
   { label: "Tree Traversal" },
@@ -98,7 +141,9 @@ function SkillGroup({ title, skills }: { title: string; skills: Skill[] }) {
         {title}
       </h3>
       <div className="flex flex-wrap gap-2">
-        {skills.map((s) => <Chip key={s.name} skill={s} />)}
+        {skills.map((s) => (
+          <Chip key={s.name} skill={s} />
+        ))}
       </div>
     </div>
   );
@@ -110,7 +155,6 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24">
       <div className="max-w-6xl mx-auto px-6">
-
         {/* Header */}
         <div className="flex items-center gap-4 mb-14">
           <span className="font-serif italic text-gold text-sm">02</span>
@@ -122,13 +166,12 @@ export default function Skills() {
 
         {/* Two-column grid */}
         <div className="grid lg:grid-cols-2 gap-12">
-
           {/* ── LEFT: Technical Skills ── */}
           <div>
-            <SkillGroup title="Frontend Development" skills={frontendSkills} />
-            <SkillGroup title="Backend Development"  skills={backendSkills} />
-            <SkillGroup title="Tools & Platforms"    skills={toolsSkills} />
-            <SkillGroup title="Libraries & Integrations" skills={otherSkills} />
+            <SkillGroup title="Frontend" skills={frontendSkills} />
+            <SkillGroup title="Backend" skills={backendSkills} />
+            <SkillGroup title="Database" skills={databaseSkills} />
+            <SkillGroup title="DevOps & Tools" skills={toolsSkills} />
           </div>
 
           {/* ── RIGHT: Problem Solving ── */}
@@ -143,7 +186,6 @@ export default function Skills() {
 
             {/* Platform cards */}
             <div className="flex flex-col gap-3 mb-8">
-
               {/* LeetCode */}
               <a
                 href={LEETCODE_URL}
@@ -151,16 +193,26 @@ export default function Skills() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
               >
-                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">🟡</div>
+                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">
+                  🟡
+                </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-semibold text-stone-800">LeetCode</div>
-                  <div className="font-mono text-[11px] text-gold truncate">{LEETCODE_HANDLE}</div>
+                  <div className="text-[13px] font-semibold text-stone-800">
+                    LeetCode
+                  </div>
+                  <div className="font-mono text-[11px] text-gold truncate">
+                    {LEETCODE_HANDLE}
+                  </div>
                 </div>
                 <div className="text-right md:shrink-0">
-                  <div className="font-mono text-lg font-medium text-stone-800">{LEETCODE_SOLVED}</div>
+                  <div className="font-mono text-lg font-medium text-stone-800">
+                    {LEETCODE_SOLVED}
+                  </div>
                   {/* <div className="text-[10px] uppercase tracking-wider text-stone-400">Problems</div> */}
                 </div>
-                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">↗</span>
+                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">
+                  ↗
+                </span>
               </a>
 
               {/* Codeforces */}
@@ -170,18 +222,27 @@ export default function Skills() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
               >
-                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">🔵</div>
+                <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">
+                  🔵
+                </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-semibold text-stone-800">Codeforces</div>
-                  <div className="font-mono text-[11px] text-gold truncate">{CF_HANDLE}</div>
+                  <div className="text-[13px] font-semibold text-stone-800">
+                    Codeforces
+                  </div>
+                  <div className="font-mono text-[11px] text-gold truncate">
+                    {CF_HANDLE}
+                  </div>
                 </div>
                 <div className="text-right shrink-0">
-                  <div className="font-mono text-lg font-medium text-stone-800">{CF_RATING}</div>
+                  <div className="font-mono text-lg font-medium text-stone-800">
+                    {CF_RATING}
+                  </div>
                   {/* <div className="text-[10px] uppercase tracking-wider text-stone-400">Rating</div> */}
                 </div>
-                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">↗</span>
+                <span className="text-stone-300 group-hover:text-gold text-sm ml-1 transition-colors">
+                  ↗
+                </span>
               </a>
-
             </div>
 
             {/* CS Concepts */}
@@ -203,7 +264,6 @@ export default function Skills() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
