@@ -20,6 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+          <link rel="icon" type="image/svg+xml"  href="https://i.ibb.co.com/zZ0CWvk/Portfolio-icon1.png" />
+
       <body className="bg-white text-gray-900 antialiased">{children}</body>
     </html>
   );
