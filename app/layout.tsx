@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Apu Roy — Full Stack Developer",
@@ -25,8 +26,9 @@ export default function RootLayout({
         type="image/svg+xml"
         href="https://i.ibb.co.com/zZ0CWvk/Portfolio-icon1.png"
       />
-
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+      <SmoothScroll>
+        <body className="bg-white text-gray-900 antialiased">{children}</body>
+      </SmoothScroll>
     </html>
   );
 }
