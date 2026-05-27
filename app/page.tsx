@@ -18,7 +18,7 @@ export default function Home() {
       <main className="bg-stone-900">
         <DotWaveBackground/>
         {/* bg-gradient-to-tl from-orange-200 to-gray-300 */}
-        <Banner/>
+        {/* <Banner/> */}
         {/* <Hero /> */}
         <About />
         <Skills />

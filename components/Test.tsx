@@ -177,7 +177,7 @@ export default function DotWaveBackground() {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-[#fff8f2]">
+    <div className="relative min-h-screen w-full overflow-hidden bg-[#fff8f2]">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 h-full w-full"
@@ -200,7 +200,7 @@ export default function DotWaveBackground() {
       </div>
 
       {/* Main card */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-32">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-24 md:-bottom-32 ">
         <div
           className="flex flex-col md:flex-row items-center gap-0 bg-black rounded-3xl  max-w-6xl w-full shadow-2xl border-2 border-gold"
           style={{ minHeight: "340px" }}
@@ -222,15 +222,15 @@ export default function DotWaveBackground() {
           </div>
 
           {/* Text content */}
-          <div className="flex flex-col justify-center px-10 py-12 flex-1 ">
+          <div className="flex flex-col justify-center px-5 md:px-10 py-5 md:py-12 flex-1 h-full ">
             <p className="text-white text-2xl md:text-3xl font-light leading-snug  max-w-sm">
-              <p className="font-serif text-5xl italic text-gold font-semibold tracking-tight pb-3 uppercase ">
+              <p className="font-serif text-2xl  md:text-5xl italic text-gold font-semibold tracking-tight md:pb-3 uppercase ">
                 Apu Roy
               </p>
 
-              <span className="font-bold">Full Stack Developer </span>
+              <span className="font-bold text-sm md:text-base">Full Stack Developer </span>
             </p>
-            <p className="text-gray-500 pt-1 pb-6">
+            <p className="text-gray-500 text-xs md:text-base pt-1 pb-6">
               Skilled in full-stack development with strong problem-solving
               abilities. Experienced in debugging and working with complex
               systems. Capable of building robust, scalable frontend and backend
@@ -239,13 +239,13 @@ export default function DotWaveBackground() {
             <div className="flex flex-wrap gap-3 h-full ">
               <Link
                 href="/#projects"
-                className="px-6 py-3 rounded-full text-sm bg-gold-400 uppercase font-bold text-black transition-all duration-200  hover:scale-105 active:scale-95"
+                className="px-4 py-1 md:px-6 md:py-3 rounded-full text-xs md:text-sm bg-gold-400 uppercase font-bold text-black transition-all duration-200  hover:scale-105 active:scale-95"
               >
                 View My Works
               </Link>
               <Link
                 href="/#contact"
-                className="px-6 py-3 uppercase rounded-full text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-all duration-200"
+                className="px-4 py-1 md:px-6 md:py-3  text-xs uppercase rounded-full md:text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-all duration-200"
               >
                 Let's talk
               </Link>
@@ -253,10 +253,10 @@ export default function DotWaveBackground() {
           </div>
         </div>
       </div>
+
       <div className="mb-36 md:mb-10">
 
       </div>
-
     </section>
     </div>
   );
