@@ -19,7 +19,7 @@ export default function Home() {
         <Test/>
         {/* bg-gradient-to-tl from-orange-200 to-gray-300 */}
         {/* <Banner/> */}
-        <Hero />
+        {/* <Hero /> */}
         <About />
         <Skills />
         <Experience />

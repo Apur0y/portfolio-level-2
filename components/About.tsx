@@ -112,26 +112,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Pillars */}
-          <div className="grid gap-3">
-            {pillars.map((p, i) => (
-              <div
-                key={p.title}
-                className={`reveal group p-5 border border-stone-100 hover:border-gold-200 transition-all duration-300 bg-stone-50 hover:bg-gold-50 card-lift`}
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <div className="w-7 h-7 bg-gold-100 flex items-center justify-center mb-3 text-gold text-sm group-hover:bg-gold group-hover:text-white transition-colors">
-                  {p.icon}
-                </div>
-                <h4 className="text-sm font-semibold text-gray-800 mb-1">
-                  {p.title}
-                </h4>
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  {p.desc}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
