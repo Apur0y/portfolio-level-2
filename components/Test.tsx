@@ -13,8 +13,8 @@ export default function Test() {
       className="relative min-h-screen  overflow-hidden font-sans"
       style={{ backgroundImage: "url('/bg2.jpg')" }}
     >
-      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 w-full ">
-        <div className="grid lg:flex gap-12 items-center justify-between ">
+      <div className="max-w-7xl mx-auto px-6 pt-24 md:pt-44 pb-16 w-full ">
+        <div className="grid lg:grid-cols-2 gap-24 items-center justify-between ">
           <div className="relative  flex justify-center lg:justify-end">
             <div className="relative w-[320px] md:w-[380px] lg:w-[350px] ">
               {/* Photo frame with gold corners */}
@@ -53,10 +53,10 @@ export default function Test() {
             </div>
 
             {/* Name */}
-            <h1 className="text-white text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-3">
+            <h1 className="text-white font-semibold  text-5xl md:text-6xl xl:text-7xl space-x-4">
               <span className="">Apu</span>
-              <br />
-              <span className=" font-semibold italic">Roy</span>
+             
+              <span className=" font-semibold ">Roy</span>
             </h1>
 
             {/* Title badge */}
