@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 
 const links = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
@@ -13,7 +13,7 @@ const links = [
 ];
 
 export default function Navbar() {
-   const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -43,10 +43,7 @@ export default function Navbar() {
       }
 
       if (currentScrollY > 30) {
-        if (
-          currentScrollY > lastScrollY.current &&
-          currentScrollY > 100
-        ) {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
           // scrolling down
           setIsVisible(false);
         } else if (currentScrollY < lastScrollY.current) {
@@ -66,30 +63,29 @@ export default function Navbar() {
       passive: true,
     });
 
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-  const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    },
-    {
-      threshold: 0.5, // 50% visible
-    }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5, // 50% visible
+      },
+    );
 
-  sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => observer.observe(section));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (navRef.current) {
@@ -101,27 +97,55 @@ export default function Navbar() {
     }
   }, [isVisible]);
 
-  console.log("actice",activeSection);
+  console.log("actice", activeSection);
   return (
     <nav
       ref={navRef}
-      className={`fixed top-3 left-0 right-0 z-50 transition-all duration-300 ${
-        hasGlass
-          ? ""
-          : scrolled
-          ? ""
-          : "bg-transparent"
-      }`}
+      className={`fixed top-3 left-0 right-0 z-50 transition-all duration-300 `}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between ">
         {/* Desktop nav */}
-         <ul className="hidden md:flex items-center justify-center gap-8 w-full">
-          <div className="border flex items-center justify-center gap-8 px-8 py-2 rounded-full bg-white/20 backdrop-blur-2xl">
+        <ul className="hidden md:flex items-center justify-center gap-8 w-full">
+          <div className="border flex items-center justify-center gap-4 px-1 py-2 rounded-full bg-gray-300/20 backdrop-blur-2xl">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className={`nav-link text-white ${activeSection === l.label.toLowerCase() ? "text-gold" : ""}`}>
-                  {l.label}
-                </a>
+                <div className="relative">
+                  <a
+                    href={l.href}
+                    className={`
+        nav-link
+        rounded-full
+        px-3 py-2
+        transition-all duration-300
+        ${
+          activeSection === l.href.substring(1)
+            ? "text-white border border-white"
+            : "text-gray-300 border border-transparent hover:text-white"
+        }
+      `}
+                  >
+                    {l.label}
+                  </a>
+
+                  <span
+                    className={`
+        absolute
+        -top-[10px]
+        left-1/2
+        -translate-x-1/2
+        h-[3px]
+        rounded-full
+        bg-white
+        shadow-[0_0_12px_4px_rgba(255,255,255,0.8)]
+        transition-all duration-300
+        ${
+          activeSection === l.href.substring(1)
+            ? "w-8 opacity-100"
+            : "w-0 opacity-0"
+        }
+      `}
+                  />
+                </div>
               </li>
             ))}
           </div>
@@ -129,25 +153,25 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col gap-1.5 p-2 "
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-px w-6 bg-gray-800 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`block h-px w-6 bg-gray-100 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`block h-px w-6 bg-gray-800 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+            className={`block h-px w-6 bg-gray-100 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block h-px w-6 bg-gray-800 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block h-px w-6 bg-gray-100 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-white border-t border-stone-100 overflow-hidden transition-all duration-300 ${
+        className={`md:hidden bg-black   overflow-hidden transition-all duration-300 ${
           menuOpen ? "max-h-96 py-4" : "max-h-0"
         }`}
       >
@@ -156,7 +180,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-gray-600 hover:text-gold transition-colors"
+                className="text-sm text-gray-100 hover:text-gold transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {l.label}

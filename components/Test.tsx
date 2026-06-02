@@ -9,7 +9,7 @@ export default function Test() {
 
   return (
     <section
-      id="banner"
+      id="home"
       className="relative min-h-screen  overflow-hidden font-sans"
       style={{ backgroundImage: "url('/bg2.jpg')" }}
     >
@@ -48,7 +48,7 @@ export default function Test() {
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-gold" />
               <span className="text-xs tracking-[0.2em] uppercase text-gold font-semibold font-sans">
-                Portfolio 2025
+                Portfolio
               </span>
             </div>
 
@@ -97,7 +97,6 @@ export default function Test() {
 
         </div>
       </div>
-      <div className="mb-36 md:mb-10"></div>
     </section>
   );
 }
