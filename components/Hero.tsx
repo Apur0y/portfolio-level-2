@@ -45,74 +45,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT — Text content */}
-          <div className="relative z-10 order-2 lg:order-1">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-px bg-gold" />
-              <span className="text-xs tracking-[0.2em] uppercase text-gold font-semibold font-sans">
-                Portfolio 2025
-              </span>
-            </div>
-
-            {/* Name */}
-            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-3">
-              <span className="text-gray-900">Apu</span>
-              <br />
-              <span className="text-shimmer font-semibold italic">Roy</span>
-            </h1>
-
-            {/* Title badge */}
-            <div className="inline-flex items-center gap-2 bg-gold-50 border border-gold-200 px-4 py-2 mb-6 mt-2">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
-              <span className="text-sm font-medium text-gold-700 tracking-wide">
-                Full Stack Developer
-              </span>
-            </div>
-
-            <p className="text-gray-500 text-base leading-relaxed max-w-md mb-8 font-light">
-              I craft <span className="text-gray-800 font-medium">scalable web applications</span> from
-              pixel-perfect frontends to robust backends — turning ideas into
-              production-ready digital products.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              <a
-                href="#projects"
-                className="bg-gold text-white text-xs font-bold tracking-widest uppercase px-7 py-3.5 hover:bg-gold-600 transition-colors duration-200 shadow-gold-sm"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="border border-gray-300 text-gray-700 text-xs font-medium tracking-widest uppercase px-7 py-3.5 hover:border-gold hover:text-gold transition-all duration-200"
-              >
-                Let's Talk
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 pt-6 border-t border-stone-200">
-              {[
-                { num: "2+", label: "Years Experience" },
-                { num: "15+", label: "Projects Built" },
-                { num: "10+", label: "Technologies" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <span className="block font-serif text-3xl text-gold leading-none">
-                    {s.num}
-                  </span>
-                  <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-1 block">
-                    {s.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* RIGHT — Photo with 3D "Full Stack Developer" text */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="relative order-1 lg:order-1 flex justify-center lg:justify-end">
             <div className="relative w-[320px] md:w-[380px] lg:w-[420px] animate-float">
 
               {/* Photo frame with gold corners */}
@@ -189,6 +122,75 @@ export default function Hero() {
               </div>
             </div>
           </div>
+
+          {/* LEFT — Text content */}
+          <div className="relative z-10 order-2 lg:order-2">
+            {/* Eyebrow */}
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.2em] uppercase text-gold font-semibold font-sans">
+                Portfolio 2025
+              </span>
+            </div>
+
+            {/* Name */}
+            <h1 className="font-serif text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-3">
+              <span className="text-gray-900">Apu</span>
+              <br />
+              <span className="text-shimmer font-semibold italic">Roy</span>
+            </h1>
+
+            {/* Title badge */}
+            <div className="inline-flex items-center gap-2 bg-gold-50 border border-gold-200 px-4 py-2 mb-6 mt-2">
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
+              <span className="text-sm font-medium text-gold-700 tracking-wide">
+                Full Stack Developer
+              </span>
+            </div>
+
+            <p className="text-gray-500 text-base leading-relaxed max-w-md mb-8 font-light">
+              I craft <span className="text-gray-800 font-medium">scalable web applications</span> from
+              pixel-perfect frontends to robust backends — turning ideas into
+              production-ready digital products.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-3 mb-10">
+              <a
+                href="#projects"
+                className="bg-gold text-white text-xs font-bold tracking-widest uppercase px-7 py-3.5 hover:bg-gold-600 transition-colors duration-200 shadow-gold-sm"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="border border-gray-300 text-gray-700 text-xs font-medium tracking-widest uppercase px-7 py-3.5 hover:border-gold hover:text-gold transition-all duration-200"
+              >
+                Let's Talk
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="flex gap-8 pt-6 border-t border-stone-200">
+              {[
+                { num: "2+", label: "Years Experience" },
+                { num: "15+", label: "Projects Built" },
+                { num: "10+", label: "Technologies" },
+              ].map((s) => (
+                <div key={s.label}>
+                  <span className="block font-serif text-3xl text-gold leading-none">
+                    {s.num}
+                  </span>
+                  <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-1 block">
+                    {s.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT — Photo with 3D "Full Stack Developer" text */}
+          <div className="relative z-10 order-1 lg:order-3"></div>
 
         </div>
       </div>

@@ -8,7 +8,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import DotWaveBackground from "@/components/Test";
+import Test from "@/components/Test";
 
 export default function Home() {
   return (
@@ -16,10 +16,10 @@ export default function Home() {
       <Navbar />
       
       <main className="bg-stone-900">
-        <DotWaveBackground/>
+        <Test/>
         {/* bg-gradient-to-tl from-orange-200 to-gray-300 */}
         {/* <Banner/> */}
-        {/* <Hero /> */}
+        <Hero />
         <About />
         <Skills />
         <Experience />

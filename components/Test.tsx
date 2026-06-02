@@ -2,262 +2,132 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
 import { useEffect, useRef } from "react";
 
-export default function DotWaveBackground() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+export default function Test() {
+  const headingRef = useRef<HTMLHeadingElement>(null);
 
-  useEffect(() => {
-    const canvas = canvasRef.current!;
-    const ctx = canvas.getContext("2d")!;
-
-    let width = 0;
-    let height = 0;
-    let animationFrameId: number;
-
-    const spacing = 24;
-    const mouseRadius = 160;
-
-    const dots: Dot[] = [];
-
-    interface Dot {
-      baseX: number;
-      baseY: number;
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-    }
-
-    const mouse = {
-      x: -9999,
-      y: -9999,
-      targetX: -9999,
-      targetY: -9999,
-      active: false,
-    };
-
-    const setupCanvas = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-
-      dots.length = 0;
-
-      for (let y = 0; y < height; y += spacing) {
-        for (let x = 0; x < width; x += spacing) {
-          dots.push({
-            baseX: x,
-            baseY: y,
-            x,
-            y,
-            vx: 0,
-            vy: 0,
-          });
-        }
-      }
-    };
-
-    setupCanvas();
-
-    const handleResize = () => {
-      setupCanvas();
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouse.targetX = e.clientX;
-      mouse.targetY = e.clientY;
-      mouse.active = true;
-    };
-
-    const handleMouseLeave = () => {
-      mouse.active = false;
-
-      mouse.targetX = -9999;
-      mouse.targetY = -9999;
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseleave", handleMouseLeave);
-
-    const animate = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      const time = Date.now() * 0.001;
-
-      // Smooth delayed cursor
-      mouse.x += (mouse.targetX - mouse.x) * 0.06;
-      mouse.y += (mouse.targetY - mouse.y) * 0.06;
-
-      dots.forEach((dot) => {
-        // =========================
-        // CONTINUOUS WAVE MOTION
-        // =========================
-
-        const waveX =
-          Math.sin((dot.baseY + time * 180) * 0.02) * 2;
-
-        const waveY =
-          Math.cos((dot.baseX + time * 180) * 0.02) * 2;
-
-        // Mouse interaction
-        const dx = dot.x - mouse.x;
-        const dy = dot.y - mouse.y;
-
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < mouseRadius && mouse.active) {
-          const angle = Math.atan2(dy, dx);
-
-          const force =
-            (mouseRadius - distance) / mouseRadius;
-
-          const push = force * 4;
-
-          dot.vx += Math.cos(angle) * push;
-          dot.vy += Math.sin(angle) * push;
-        }
-
-        // Return to original + wave position
-        dot.vx +=
-          (dot.baseX + waveX - dot.x) * 0.05;
-
-        dot.vy +=
-          (dot.baseY + waveY - dot.y) * 0.05;
-
-        // Smooth damping
-        dot.vx *= 0.88;
-        dot.vy *= 0.88;
-
-        dot.x += dot.vx;
-        dot.y += dot.vy;
-
-        // Glow dots
-        ctx.beginPath();
-
-        ctx.fillStyle = "rgba(255, 175, 90, 0.85)";
-
-        ctx.arc(dot.x, dot.y, 1.5, 0, Math.PI * 2);
-
-        ctx.fill();
-      });
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener(
-        "mousemove",
-        handleMouseMove
-      );
-      window.removeEventListener(
-        "mouseleave",
-        handleMouseLeave
-      );
-    };
-  }, []);
-   const headingRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const el = headingRef.current;
-    if (!el) return;
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    setTimeout(() => {
-      el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
-    }, 100);
-  }, []);
+ 
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#fff8f2]">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 h-full w-full"
-      />
-
-      {/* Content */}
-      <section
+    <section
       id="banner"
-      className="relative overflow-hidden font-sans"
+      className="relative min-h-screen  overflow-hidden font-sans"
+      style={{backgroundImage:"url('/bg2.jpg')"}}
     >
-      {/* Background large name */}
-      <div className="absolute top-52 left-0 right-0 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0">
-        <h1
-          ref={headingRef}
-          className="text-[12vw] font-black uppercase tracking-tighter text-stone-400/40 leading-none whitespace-nowrap"
-          style={{ fontFamily: "'Georgia', serif", letterSpacing: "-0.04em" }}
-        >
-          <span className="text-shimmer font-semibold italic">Apu Roy</span>
-        </h1>
-      </div>
-
-      {/* Main card */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-24 md:-bottom-32 ">
-        <div
-          className="flex flex-col md:flex-row items-center gap-0 bg-black rounded-3xl  max-w-6xl w-full shadow-2xl border-2 border-gold"
-          style={{ minHeight: "340px" }}
-        >
-          {/* Person image placeholder */}
-          <div className="relative flex-shrink-0 w-64 md:w-96  md:self-end">
-            {/* You can replace this with an actual <Image /> from next/image */}
-            <div
-              className="w-full h-64 md:h-96  flex items-end justify-center rounded-l-3xl "
-              aria-label="Profile photo"
-            >
-              <Image
-                src={"/apuroy.png"}
-                alt="Apu Roy"
-                height={500}
-                width={500}
-              />
-            </div>
-          </div>
-
-          {/* Text content */}
-          <div className="flex flex-col justify-center px-5 md:px-10 py-5 md:py-12 flex-1 h-full ">
-            <p className="text-white text-2xl md:text-3xl font-light leading-snug  max-w-sm">
-              <p className="font-serif text-2xl  md:text-5xl italic text-gold font-semibold tracking-tight md:pb-3 uppercase ">
-                Apu Roy
-              </p>
-
-              <span className="font-bold text-sm md:text-base">Full Stack Developer </span>
-            </p>
-            <p className="text-gray-500 text-xs md:text-base pt-1 pb-6">
-              Skilled in full-stack development with strong problem-solving
-              abilities. Experienced in debugging and working with complex
-              systems. Capable of building robust, scalable frontend and backend
-              applications with precision and attention to detail.
-            </p>
-            <div className="flex flex-wrap gap-3 h-full ">
-              <Link
-                href="/#projects"
-                className="px-4 py-1 md:px-6 md:py-3 rounded-full text-xs md:text-sm bg-gold-400 uppercase font-bold text-black transition-all duration-200  hover:scale-105 active:scale-95"
-              >
-                View My Works
-              </Link>
-              <Link
-                href="/#contact"
-                className="px-4 py-1 md:px-6 md:py-3  text-xs uppercase rounded-full md:text-sm font-semibold text-white border border-white/30 hover:bg-white/10 transition-all duration-200"
-              >
-                Let's talk
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
+       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 w-full ">
+             <div className="grid lg:grid-cols-2 gap-12 items-center">
+     
+               <div className="relative  flex justify-center lg:justify-end">
+                 <div className="relative w-[320px] md:w-[380px] lg:w-[350px] ">
+     
+                   {/* Photo frame with gold corners */}
+                   <div className="relative bg-white/10 backdrop-blur-xl p-2">
+                     {/* Corner decorations */}
+                     <span className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold z-20" />
+                     <span className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-gold z-20" />
+                     <span className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-gold z-20" />
+                     <span className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-gold z-20" />
+     
+                     {/* Photo container */}
+                     <div className="relative overflow-hidden aspect-[4/5] bg-gradient-to-br from-stone-200 via-stone-100 to-stone-200">
+     
+                       
+                       <Image
+                         src="/Pro2.png"
+                         alt="Apu Roy"
+                         fill
+                         className="object-cover object-top"
+                         priority
+                       />
+                      
+     
+                       {/* Dark gradient overlay at bottom for 3D text readability */}
+                       <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10" />
+     
+                       
+                     </div>
+                   </div>
+     
+                 </div>
+               </div>
+     
+               {/* LEFT — Text content */}
+               <div className="relative z-10 order-2 lg:order-2">
+                 {/* Eyebrow */}
+                 <div className="flex items-center gap-3 mb-6">
+                   <div className="w-8 h-px bg-gold" />
+                   <span className="text-xs tracking-[0.2em] uppercase text-gold font-semibold font-sans">
+                     Portfolio 2025
+                   </span>
+                 </div>
+     
+                 {/* Name */}
+                 <h1 className="text-white text-5xl md:text-6xl xl:text-7xl leading-[1.05] tracking-tight mb-3">
+                   <span className="">Apu</span>
+                   <br />
+                   <span className=" font-semibold italic">Roy</span>
+                 </h1>
+     
+                 {/* Title badge */}
+                 <div className="inline-flex items-center gap-2 bg-gold-50 border border-gold-200 px-4 py-2 mb-6 mt-2">
+                   <span className="w-2 h-2 rounded-full bg-gold animate-pulse-slow" />
+                   <span className="text-sm font-medium text-gold-700 tracking-wide">
+                     Full Stack Developer
+                   </span>
+                 </div>
+     
+                 <p className="text-gray-500 text-base leading-relaxed max-w-md mb-8 font-light">
+                   I craft <span className="text-gray-800 font-medium">scalable web applications</span> from
+                   pixel-perfect frontends to robust backends — turning ideas into
+                   production-ready digital products.
+                 </p>
+     
+                 {/* CTA Buttons */}
+                 <div className="flex flex-wrap gap-3 mb-10">
+                   <a
+                     href="#projects"
+                     className="bg-gold text-white text-xs font-bold tracking-widest uppercase px-7 py-3.5 hover:bg-gold-600 transition-colors duration-200 shadow-gold-sm"
+                   >
+                     View My Work
+                   </a>
+                   <a
+                     href="#contact"
+                     className="border border-gray-300 text-gray-700 text-xs font-medium tracking-widest uppercase px-7 py-3.5 hover:border-gold hover:text-gold transition-all duration-200"
+                   >
+                     Let's Talk
+                   </a>
+                 </div>
+     
+                 {/* Stats */}
+                 <div className="flex gap-8 pt-6 border-t border-stone-200">
+                   {[
+                     { num: "2+", label: "Years Experience" },
+                     { num: "15+", label: "Projects Built" },
+                     { num: "10+", label: "Technologies" },
+                   ].map((s) => (
+                     <div key={s.label}>
+                       <span className="block font-serif text-3xl text-gold leading-none">
+                         {s.num}
+                       </span>
+                       <span className="text-[10px] text-gray-400 uppercase tracking-widest mt-1 block">
+                         {s.label}
+                       </span>
+                     </div>
+                   ))}
+                 </div>
+               </div>
+     
+               {/* RIGHT — Photo with 3D "Full Stack Developer" text */}
+               <div className="relative z-10 order-1 lg:order-3"></div>
+     
+             </div>
+           </div>
       <div className="mb-36 md:mb-10">
+            
 
       </div>
+
     </section>
-    </div>
   );
 }

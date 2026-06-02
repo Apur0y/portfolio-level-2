@@ -7,38 +7,29 @@ import { useEffect, useRef } from "react";
 export default function Banner() {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
-  useEffect(() => {
-    const el = headingRef.current;
-    if (!el) return;
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    setTimeout(() => {
-      el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
-    }, 100);
-  }, []);
+ 
 
   return (
     <section
       id="banner"
-      className="relative min-h-screen bg-gradient-to-tl from-orange-200 to-gray-300 overflow-hidden font-sans"
+      className="relative min-h-screen  overflow-hidden font-sans"
+      style={{backgroundImage:"url('/bg2.jpg')"}}
     >
       {/* Background large name */}
       <div className="absolute top-52 left-0 right-0 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0">
         <h1
           ref={headingRef}
           className="text-[12vw] font-black uppercase tracking-tighter text-stone-400/40 leading-none whitespace-nowrap"
-          style={{ fontFamily: "'Georgia', serif", letterSpacing: "-0.04em" }}
+          style={{ fontFamily: "'Georgia', serif", letterSpacing: "-0.04em",  }}
         >
           <span className="text-shimmer font-semibold italic">Apu Roy</span>
         </h1>
       </div>
 
       {/* Main card */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-32">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 -bottom-32 ">
         <div
-          className="flex flex-col md:flex-row items-center gap-0 bg-black rounded-3xl  max-w-6xl w-full shadow-2xl"
+          className="relative flex flex-col md:flex-row items-center gap-0  rounded-3xl bg-black  max-w-6xl w-full shadow-2xl "
           style={{ minHeight: "340px" }}
         >
           {/* Person image placeholder */}
@@ -87,9 +78,13 @@ export default function Banner() {
               </Link>
             </div>
           </div>
+          
+       
         </div>
+
       </div>
       <div className="mb-36 md:mb-10">
+            
 
       </div>
 
