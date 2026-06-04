@@ -1,0 +1,459 @@
+[
+  {
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  },{
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  },{
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  },{
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  },{
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  },{
+    "id": 1,
+    "slug": "system-design-introduction",
+    "title": "System Design Basics",
+    "description": "Learn the fundamentals of system design including scalability, load balancing, and architecture patterns.",
+    "sections": [
+      {
+        "title": "What is System Design?",
+        "content": "System design is the process of designing the architecture of a software system.",
+        "code": "Client → Load Balancer → Servers → Database"
+      },
+      {
+        "title": "Scalability",
+        "content": "Scalability means handling increased load by adding resources.",
+        "code": "Horizontal Scaling: Add more servers\nVertical Scaling: Upgrade server power"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "development-best-practices",
+    "title": "Development Best Practices",
+    "description": "Follow clean code, modular architecture, and proper version control in modern development.",
+    "sections": [
+      {
+        "title": "Clean Code",
+        "content": "Write code that is readable and maintainable.",
+        "code": "function calculateTotal(price, tax) {\n  return price + tax;\n}"
+      },
+      {
+        "title": "Folder Structure",
+        "content": "Organize your project for scalability.",
+        "code": "src/\n  components/\n  pages/\n  services/\n  utils/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "performance-optimization",
+    "title": "Performance Optimization in Web Apps",
+    "description": "Improve speed and efficiency of web applications.",
+    "sections": [
+      {
+        "title": "Code Splitting",
+        "content": "Split your code into smaller bundles to improve load time.",
+        "code": "const Home = React.lazy(() => import('./Home'));"
+      },
+      {
+        "title": "Caching",
+        "content": "Use caching to reduce server requests and improve speed.",
+        "code": "Cache-Control: max-age=3600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "data-handling-in-web-apps",
+    "title": "Data Handling in Web Applications",
+    "description": "Learn how to fetch, manage, and store data efficiently.",
+    "sections": [
+      {
+        "title": "Fetching Data",
+        "content": "Use API calls to fetch data from backend services.",
+        "code": "fetch('/api/users')\n  .then(res => res.json())\n  .then(data => console.log(data));"
+      },
+      {
+        "title": "State Management",
+        "content": "Manage application state using tools like Context API or Zustand.",
+        "code": "const [users, setUsers] = useState([]);"
+      },
+      {
+        "title": "Database Interaction",
+        "content": "Use databases like PostgreSQL or MongoDB to store data.",
+        "code": "SELECT * FROM users WHERE active = true;"
+      }
+    ]
+  }
+]
