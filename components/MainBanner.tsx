@@ -3,6 +3,26 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+
+const socialLinks = [
+  {
+    icon: <FaGithub />,
+    link: "https://github.com/Apur0y",
+    className: "hover:text-white",
+  },
+  {
+    icon: <FaLinkedin />,
+    link: "https://www.linkedin.com/in/apu-r0y/",
+    className: "hover:text-blue-600",
+  },
+  {
+    icon: <BiLogoGmail />,
+    link: "mailto:apuroy@email.com",
+    className: "hover:text-red-600",
+  },
+];
 
 export default function MainBanner() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -24,16 +44,28 @@ export default function MainBanner() {
 
       // Floating orbs
       gsap.to(orb1Ref.current, {
-        x: 60, y: -40, duration: 9,
-        ease: "sine.inOut", repeat: -1, yoyo: true,
+        x: 60,
+        y: -40,
+        duration: 9,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
       });
       gsap.to(orb2Ref.current, {
-        x: -50, y: 55, duration: 11,
-        ease: "sine.inOut", repeat: -1, yoyo: true,
+        x: -50,
+        y: 55,
+        duration: 11,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
       });
       gsap.to(orb3Ref.current, {
-        x: 40, y: 30, duration: 7,
-        ease: "sine.inOut", repeat: -1, yoyo: true,
+        x: 40,
+        y: 30,
+        duration: 7,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
       });
 
       // Mouse parallax
@@ -41,8 +73,11 @@ export default function MainBanner() {
         const xPct = (e.clientX / window.innerWidth - 0.5) * 2;
         const yPct = (e.clientY / window.innerHeight - 0.5) * 2;
         gsap.to(bgRef.current, {
-          x: xPct * -18, y: yPct * -12,
-          duration: 1.4, ease: "power2.out", overwrite: "auto",
+          x: xPct * -18,
+          y: yPct * -12,
+          duration: 1.4,
+          ease: "power2.out",
+          overwrite: "auto",
         });
       };
 
@@ -97,7 +132,6 @@ export default function MainBanner() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 md:pt-44 pb-16 w-full">
         <div className="grid lg:grid-cols-2 gap-24 items-center justify-between">
-
           {/* Photo */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-[320px] md:w-[380px] lg:w-[350px]">
@@ -149,12 +183,25 @@ export default function MainBanner() {
               into production-ready digital products.
             </p>
 
+            <div className="flex  pb-6 gap-5 mx-auto">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-2xl transition-all duration-300 text-white ${social.className}  hover:scale-125 `}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+
             <div className="flex flex-wrap gap-3 mb-10">
               <a
-              
                 href="#projects"
                 className="border text-white text-xs font-bold tracking-widest uppercase px-7 py-3.5 transition-colors hover:border-gray-500 hover:text-gray-500 duration-200"
->
+              >
                 View My Work
               </a>
               <a
@@ -165,7 +212,6 @@ export default function MainBanner() {
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
