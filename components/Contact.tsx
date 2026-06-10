@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 const channels = [
   {
@@ -7,19 +8,22 @@ const channels = [
     label: "Email",
     value: "apuroy2785@email.com",
     href: "mailto:apuroy@email.com",
+    className:"text-red-700"
   },
   {
     icon: "in",
     label: "LinkedIn",
     value: "linkedin.com/in/apu-r0y",
     href: "https://www.linkedin.com/in/apu-r0y/",
+    className:"text-blue-600"
   },
-  { icon: "GH", label: "GitHub", value: "github.com/Apur0y", href: "#" },
+  { icon: <FaGithub />, label: "GitHub", value: "github.com/Apur0y", href: "#",  className:"text-white" },
   {
     icon: "☎",
     label: "Phone",
     value: "+880 1786209895",
     href: "tel:+8801786209895",
+    className:"text-green-600"
   },
 ];
 
@@ -57,7 +61,7 @@ export default function Contact() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="gap-16 items-start">
           {/* Left */}
           <div className="reveal">
             <h3 className="font-serif text-3xl md:text-4xl leading-tight tracking-tight text-gray-100 mb-5">
@@ -77,16 +81,16 @@ export default function Contact() {
                   href={c.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-white border border-stone-100 hover:border-gold-200 transition-all duration-200 group"
+                  className="flex items-center gap-4 p-4 bg-stone-800 border border-stone-100 hover:border-gold-200 transition-all duration-200 group"
                 >
-                  <div className="w-9 h-9 bg-gold-50 border border-gold-100 flex items-center justify-center text-gold text-xs font-bold shrink-0 group-hover:bg-gold group-hover:text-white transition-colors">
+                  <div className={`w-9 h-9   flex items-center justify-center  text-3xl font-bold shrink-0 group-hover:bg-gold group-hover:text-white transition-colors ${c.className}`}>
                     {c.icon}
                   </div>
                   <div>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-0.5">
+                    <p className="text-[10px] text-gray-200 uppercase tracking-widest mb-0.5">
                       {c.label}
                     </p>
-                    <p className="text-sm font-medium text-gray-800 group-hover:text-gold transition-colors">
+                    <p className="text-sm font-medium text-gray-400 group-hover:text-gold transition-colors">
                       {c.value}
                     </p>
                   </div>
@@ -109,82 +113,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Form */}
-          <form
-            className="reveal space-y-4"
-            style={{ transitionDelay: "100ms" }}
-            onSubmit={handleSubmit}
-          >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="bg-white border border-stone-200 text-gray-800 px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors placeholder:text-gray-300"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Last name"
-                  className="bg-white border border-stone-200 text-gray-800 px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors placeholder:text-gray-300"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
-                Email
-              </label>
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="bg-white border border-stone-200 text-gray-800 px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors placeholder:text-gray-300"
-              />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
-                Subject
-              </label>
-              <input
-                type="text"
-                placeholder="What's this about?"
-                className="bg-white border border-stone-200 text-gray-800 px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors placeholder:text-gray-300"
-              />
-            </div>
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] tracking-widest uppercase text-gray-400 font-semibold">
-                Message
-              </label>
-              <textarea
-                placeholder="Tell me about your project or opportunity..."
-                rows={5}
-                className="bg-white border border-stone-200 text-gray-800 px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors placeholder:text-gray-300 resize-none"
-              />
-            </div>
-            <button
-              type="button"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/apu-r0y/",
-                  "_blank",
-                  "noopener,noreferrer",
-                )
-              }
-              className={`w-full py-4 text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
-                sent
-                  ? "bg-green-500 text-white"
-                  : "bg-gold text-white hover:bg-gold-600 shadow-gold-sm"
-              }`}
-            >
-              {sent ? "Message Sent ✓" : "Send Message"}
-            </button>
-          </form>
+         
         </div>
       </div>
     </section>

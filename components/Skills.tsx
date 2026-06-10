@@ -1,5 +1,7 @@
 "use client";
 
+import { SiCodeforces, SiLeetcode } from "react-icons/si";
+
 // ── Skill data ──────────────────────────────────────────────────────────────
 
 const frontendSkills = [
@@ -122,14 +124,22 @@ type Skill = { name: string; icon?: string; emoji?: string };
 
 function Chip({ skill }: { skill: Skill }) {
   return (
-    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 border border-stone-200 bg-white rounded text-xs font-medium text-stone-600 hover:border-gold hover:text-gold hover:bg-gold-50 transition-all duration-200 cursor-default">
+    <span className="group inline-flex items-center gap-1.5 px-3 py-1.5 border text-gray-200 backdrop-blur-xl bg-stone-800 cursor-pointer rounded-3xl hover:rounded transition-all duration-200 overflow-hidden">
       {skill.icon ? (
-        // eslint-disable-next-line @next/next/no-img-element
         <img src={skill.icon} alt="" className="w-4 h-4 object-contain" />
       ) : (
         <span className="text-sm leading-none">{skill.emoji}</span>
       )}
-      {skill.name}
+
+      <span className="relative h-5 overflow-hidden">
+        <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+          {skill.name}
+        </span>
+
+        <span className="absolute left-0 top-full transition-transform duration-300 group-hover:-translate-y-full">
+          {skill.name}
+        </span>
+      </span>
     </span>
   );
 }
@@ -191,13 +201,13 @@ export default function Skills() {
                 href={LEETCODE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
+                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-stone-800 rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
               >
                 <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">
-                  🟡
+                  <SiLeetcode />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-semibold text-stone-800">
+                  <div className="text-[13px] font-semibold text-gray-200">
                     LeetCode
                   </div>
                   <div className="font-mono text-[11px] text-gold truncate">
@@ -220,13 +230,13 @@ export default function Skills() {
                 href={CF_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-white rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
+                className="flex items-center gap-4 px-4 py-3.5 border border-stone-200 bg-stone-800 rounded-md hover:border-gold hover:shadow-md transition-all duration-200 group"
               >
                 <div className="w-9 h-9 rounded-lg bg-stone-100 flex items-center justify-center text-xl shrink-0">
-                  🔵
+                  <SiCodeforces />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[13px] font-semibold text-stone-800">
+                  <div className="text-[13px] font-semibold text-gray-200">
                     Codeforces
                   </div>
                   <div className="font-mono text-[11px] text-gold truncate">
@@ -249,20 +259,30 @@ export default function Skills() {
             <h4 className="font-serif italic text-gold-700 text-[15px] mb-3 pb-2.5 border-b border-stone-200">
               CS Concepts & Algorithms
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {concepts.map((c) => (
-                <span
-                  key={c.label}
-                  className={`px-3 py-1 rounded-full text-[11px] font-medium border transition-all duration-200 cursor-default hover:border-gold hover:text-gold ${
-                    c.highlight
-                      ? "bg-amber-50 border-amber-200 text-amber-800"
-                      : "bg-stone-100 border-stone-200 text-stone-600"
-                  }`}
-                >
-                  {c.label}
-                </span>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-2">
+  {concepts.map((c) => (
+    <span
+      key={c.label}
+      className={`group relative overflow-hidden px-3 py-1 rounded-full hover:rounded text-[11px] font-medium cursor-pointer transition-all  ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        c.highlight
+          ? "bg-amber-50 text-amber-800"
+          : "bg-stone-100 text-stone-600"
+      }`}
+    >
+      <span className="relative block h-4 overflow-hidden">
+        {/* Current text */}
+        <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+          {c.label}
+        </span>
+
+        {/* Incoming text */}
+        <span className="absolute left-0 top-full transition-transform duration-300 group-hover:-translate-y-full">
+          {c.label}
+        </span>
+      </span>
+    </span>
+  ))}
+</div>
           </div>
         </div>
       </div>
