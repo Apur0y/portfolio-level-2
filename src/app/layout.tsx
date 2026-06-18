@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
+import SmoothScroll from "../components/SmoothScroll";
+
 
 export const metadata: Metadata = {
   title: "Apu Roy — Full Stack Developer",

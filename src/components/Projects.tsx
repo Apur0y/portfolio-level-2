@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const projects = [
   {
@@ -85,6 +86,7 @@ function ProjectImage({
 }) {
   const [active, setActive] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
 
   const startCycle = () => {
     if (images.length <= 1) return;
@@ -197,6 +199,7 @@ export default function Projects() {
     const frame = requestAnimationFrame(() => observeCards());
     return () => cancelAnimationFrame(frame);
   }, [view, observeCards]);
+    const router = useRouter();
 
   return (
     <>
@@ -215,7 +218,7 @@ export default function Projects() {
         }
       `}</style>
 
-      <section id="projects" className="py-24" ref={ref}>
+      <section  id="projects" className="py-24" ref={ref}>
         <div className="max-w-6xl mx-auto px-6">
 
           {/* ── Section header ── */}
@@ -260,6 +263,7 @@ export default function Projects() {
                 className={`reveal card-lift group bg-white border border-stone-100 hover:border-amber-200 overflow-hidden ${
                   view === "list" ? "flex flex-row" : "flex flex-col"
                 }`}
+                onClick={() => router.push(`/projects/${p.title}`)}
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
                 {/* Image slideshow */}
