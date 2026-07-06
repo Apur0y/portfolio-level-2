@@ -91,7 +91,7 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="py-28 bg-stone-900 text-white"
+      className="py-28  text-white"
     >
       <div className="max-w-6xl mx-auto px-6">
 

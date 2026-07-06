@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -262,6 +263,7 @@ export default function Projects() {
                 }`}
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
+                <Link href={`/project/${p.name}`} className="flex-1">
                 {/* Image slideshow */}
                 <ProjectImage
                   images={p.images}
@@ -271,6 +273,7 @@ export default function Projects() {
                 />
 
                 {/* Content */}
+                
                 <div className="p-6 flex-1 flex flex-col bg-stone-800">
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-3">
@@ -299,8 +302,11 @@ export default function Projects() {
                     {p.desc}
                   </p>
 
-                  {/* Links */}
-                  <div className="flex gap-5 pt-4 border-t border-stone-100">
+                 
+                </div>
+                </Link>
+                 {/* Links */}
+                  <div className="flex gap-5 pt-4 border-t bg-stone-800 items-center justify-center p-3 border-stone-100">
                     <a
                       href={p.live}
                       target="_blank"
@@ -326,7 +332,6 @@ export default function Projects() {
                       GitHub →
                     </a>
                   </div>
-                </div>
               </div>
             ))}
           </div>

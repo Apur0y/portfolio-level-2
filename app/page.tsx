@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Navbar />
       
-      <main className="bg-stone-900">
+      <main className="bg-neutral-950">
         <MainBanner/>
         {/* bg-gradient-to-tl from-orange-200 to-gray-300 */}
         {/* <Banner/> */}
